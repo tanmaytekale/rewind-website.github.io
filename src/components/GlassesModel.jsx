@@ -4,7 +4,7 @@ import { useGLTF } from '@react-three/drei';
 export function GlassesModel(props) {
     const group = useRef();
     // Load the GLB model
-    const { nodes, materials } = useGLTF('/rewind_headset.glb');
+    const { nodes, materials } = useGLTF('./rewind_headset.glb');
 
     return (
         <group ref={group} {...props} dispose={null}>
@@ -19,4 +19,4 @@ export function GlassesModel(props) {
     );
 }
 
-useGLTF.preload('/rewind_headset.glb');
+useGLTF.preload('./rewind_headset.glb');

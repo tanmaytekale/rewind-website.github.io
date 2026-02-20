@@ -169,7 +169,11 @@ export function Scene() {
 
     return (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: 1, background: '#050505' }}>
-            <Canvas camera={{ position: [0, 0, 8], fov: 45 }} gl={{ antialias: false, pixelRatio: 1 }}>
+            <Canvas
+                dpr={[1, 1.5]}
+                camera={{ position: [0, 0, 8], fov: 45 }}
+                gl={{ antialias: false, pixelRatio: 1, powerPreference: "high-performance" }}
+            >
                 <ambientLight intensity={0.2} />
                 <pointLight position={[10, 10, 10]} intensity={1} color="#8b5cf6" />
                 <pointLight position={[-10, -10, -10]} intensity={1} color="#ef4444" />
